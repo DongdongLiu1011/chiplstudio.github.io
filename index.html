@@ -1,122 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChipL Studio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f5f5f5;
-      color: #414141;
-    }
-    header {
-      background-color: #ffffff;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-    .logo {
-      font-weight: bold;
-      font-size: 20px;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #414141;
-      font-weight: 500;
-    }
-    nav ul {
-      list-style: none;
-      display: flex; /* 设置为横向排列 */
-      padding: 0;
-      margin: 0;
-      align-items: center;
-    }
-    nav li {
-      margin: 0 15px;
-    }
-    .cta {
-      background-color: #d9ff00;
-      padding: 8px 20px;
-      border-radius: 30px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-    }
-    .hero {
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
-    .hero h1 {
-      font-size: 40px;
-      font-weight: 800;
-    }
-    .highlight {
-      background: #ffff00aa;
-      display: inline-block;
-      transform: rotate(-2deg);
-      padding: 0 5px;
-    }
-    .subheading {
-      margin-top: 10px;
-      font-size: 18px;
-      color: #666;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 50px;
-    }
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      color: #444;
-    }
-    .dark-card {
-      background-color: #414141;
-      color: rgb(231, 104, 248);
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-  <div class="logo">
-    <img src="logo.jpeg" alt="Logo" style="height: 42px; vertical-align: middle; margin-right: 8px; border-radius: 4px;" />
-    ChipL Studio
-  </div>
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="solutions.html">Solutions</a></li>
-    <li><a href="cases.html">Cases</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About Us</a></li>
-  </ul>
-</nav>
-  <a href="/zh/index.html" class="language-switch" style="background-color: #eaff00; padding: 10px 20px; border-radius: 20px; color: rgb(47, 47, 47); text-decoration: none; font-weight: bold;">中文</a>
-</header>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Logo" class="logo-img" />
+      ChipL Studio
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="cases.html">Cases</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+    <a href="/zh/index.html" class="language-switch">中文</a>
+  </header>
 
   <section class="hero">
     <h1>Your <span class="highlight">Ultimate</span> Organ-on-Chip Solution</h1>
@@ -124,43 +33,48 @@
   </section>
 
   <section class="features">
-  
+    <a href="organ-on-chip.html" class="card card1">
+      <div class="card-content">
+        <img src="images/organ.png" alt="Organ on a Chip">
+        <span>Organ on a Chip</span>
+      </div>
+    </a>
 
-  <a href="organoids.html" class="card card2">
-    <div class="card-content">
-      <img src="images/organoids.png" alt="Organoids">
-      <span>Organoids</span>
-    </div>
-  </a>
+    <a href="organoids.html" class="card card2">
+      <div class="card-content">
+        <img src="images/organoids.png" alt="Organoids">
+        <span>Organoids</span>
+      </div>
+    </a>
 
-  <a href="bioprinting.html" class="card card3">
-    <div class="card-content">
-      <img src="images/bioprinting.png" alt="3D Bioprinting">
-      <span>3D Bioprinting</span>
-    </div>
-  </a>
+    <a href="bioprinting.html" class="card card3">
+      <div class="card-content">
+        <img src="images/bioprinting.png" alt="3D Bioprinting">
+        <span>3D Bioprinting</span>
+      </div>
+    </a>
 
-  <a href="faq.html" class="card card4">
-    <div class="card-content">
-      <img src="images/faq.png" alt="FAQ">
-      <span>FAQ</span>
-    </div>
-  </a>
+    <a href="faq.html" class="card card4">
+      <div class="card-content">
+        <img src="images/faq.png" alt="FAQ">
+        <span>FAQ</span>
+      </div>
+    </a>
 
-  <a href="about.html" class="card card5">
-    <div class="card-content">
-      <img src="images/about.png" alt="About Us">
-      <span>About Us</span>
-    </div>
-  </a>
+    <a href="about.html" class="card card5">
+      <div class="card-content">
+        <img src="images/about.png" alt="About Us">
+        <span>About Us</span>
+      </div>
+    </a>
 
-  <a href="contact.html" class="card card6">
-    <div class="card-content">
-      <img src="images/contact.png" alt="Contact">
-      <span>Contact</span>
-    </div>
-  </a>
-</section>    
+    <a href="contact.html" class="card card6">
+      <div class="card-content">
+        <img src="images/contact.png" alt="Contact">
+        <span>Contact</span>
+      </div>
+    </a>
+  </section>    
 
   <footer>
     © 2025 ChipL Studio. All rights reserved. | info@chiplstudio.com
