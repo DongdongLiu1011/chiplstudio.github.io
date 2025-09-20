@@ -85,6 +85,13 @@
       font-size: 16px;
       color: #444;
     }
+    .card-img {
+      width: 100%;        /* 图片宽度适应卡片 */
+      height: auto;       /* 高度自动保持比例 */
+      max-height: 120px;  /* 限制图片最大高度 */
+      object-fit: contain; /* 等比缩放并完整显示图片 */
+     margin-bottom: 10px;
+    }
     .dark-card {
       background-color: #414141;
       color: rgb(231, 104, 248);
@@ -132,6 +139,7 @@
       <img src="images/organ-on-chip.png" alt="Organ-on-Chip">
       <span>Organ-on-Chip</span>
     </div>
+    
   <a href="organoids.html" class="card card2">
     <div class="card-content">
       <img src="images/organoids.png" alt="Organoids">
