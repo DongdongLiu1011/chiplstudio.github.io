@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChipL Studio</title>
+  <meta name="description" content="ChipL Studio 提供器官芯片、类器官、3D生物打印等一站式解决方案。">
+<meta name="keywords" content="器官芯片, 类器官, 3D生物打印, ChipL Studio">
+<meta name="author" content="ChipL Studio">
   <style>
     body {
       margin: 0;
@@ -85,13 +88,7 @@
       font-size: 16px;
       color: #444;
     }
-    .card-img {
-      width: 100%;        /* 图片宽度适应卡片 */
-      height: auto;       /* 高度自动保持比例 */
-      max-height: 40px;  /* 限制图片最大高度 */
-      object-fit: contain; /* 等比缩放并完整显示图片 */
-     margin-bottom: 10px;
-    }
+  
     .dark-card {
       background-color: #414141;
       color: rgb(231, 104, 248);
@@ -102,12 +99,22 @@
       font-size: 14px;
       color: #888;
     }
+
+    /* Add hover effects for better interactivity */
+    nav a:hover {
+      color: #007BFF;
+      text-decoration: underline;
+    }
+    .card a:hover {
+      color: #007BFF;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
   <div class="logo">
-    <img src="logo.jpeg" alt="Logo" style="height: 42px; vertical-align: middle; margin-right: 8px; border-radius: 4px;" />
+    <img src="logo.jpeg" alt="Logo" style="height: 34px; vertical-align: middle; margin-right: 8px; border-radius: 4px;" />
     ChipL Studio
   </div>
 <nav>
@@ -115,13 +122,26 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="news.html">News</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="solutions.html">Solutions</a></li>
-    <li><a href="cases.html">Cases</a></li>
+    
+   
     <li><a href="resources.html">Resources</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    
     <li><a href="about.html">About Us</a></li>
   </ul>
 </nav>
+  <form onsubmit="handleSearch(event)" style="margin-right: 20px; display: inline-block;">
+    <input type="text" id="search-input" placeholder="Search..." style="padding: 8px; border: 1px solid #ccc; border-radius: 20px; width: 200px; font-size: 14px;">
+    <button type="submit" style="padding: 8px 20px; background-color: #d9ff00; color: black; border: none; border-radius: 20px; cursor: pointer; font-weight: bold;">Search</button>
+  </form>
+  <script>
+    function handleSearch(event) {
+      event.preventDefault();
+      const query = document.getElementById('search-input').value.trim();
+      if (query) {
+        window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
+      }
+    }
+  </script>
   <a href="/zh/index.html" class="language-switch" style="background-color: #eaff00; padding: 10px 20px; border-radius: 20px; color: rgb(47, 47, 47); text-decoration: none; font-weight: bold;">中文</a>
 </header>
 

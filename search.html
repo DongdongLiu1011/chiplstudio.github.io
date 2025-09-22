@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #results {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <div id="results"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('q').toLowerCase();
+    const resultsDiv = document.getElementById('results');
+
+    // 关键词与页面链接的映射表
+    const pages = {
+      "organ-on-chip": "/organ-on-chip.html",
+      "organoids": "/organoids.html",
+      "3d bioprinting": "/bioprinting.html",
+      "faq": "/faq.html",
+      "about us": "/about.html",
+      "contact": "/contact.html"
+    };
+
+    if (query) {
+      resultsDiv.innerHTML = `<p>You searched for: <strong>${query}</strong></p>`;
+      let found = false;
+
+      // 遍历映射表，查找匹配的关键词
+      for (const [key, link] of Object.entries(pages)) {
+        if (key.includes(query)) {
+          resultsDiv.innerHTML += `<p><a href="${link}">Go to ${key}</a></p>`;
+          found = true;
+        }
+      }
+
+      if (!found) {
+        resultsDiv.innerHTML += '<p>No related entries found.</p>';
+      }
+    } else {
+      resultsDiv.innerHTML = '<p>No search query provided.</p>';
+    }
+  </script>
+</body>
+</html>
